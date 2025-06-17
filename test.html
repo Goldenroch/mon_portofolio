@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Roch - Portfolio Motion Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at top, #000428, #004e92);
+      color: #fff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    header {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(145deg, #ff003c, #ff8c00);
+      color: white;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      animation: gradientShift 10s infinite linear;
+    }
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      letter-spacing: 3px;
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #fffcd2;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #001f3f;
+      padding: 1rem;
+      text-align: center;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    nav a {
+      color: #ffcc00;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff003c;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #00ffd5;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 5px #00ffd5;
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #031d44;
+      border: 2px solid #00ffd5;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffd5;
+    }
+    .card img {
+      width: 70px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 10px #00ffd5);
+    }
+    .card h3 {
+      color: #ffcc00;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      color: #c2c2c2;
+    }
+    footer {
+      background: #001f3f;
+      color: #999;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #00ffd5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Golden Roch</h1>
+    <p>Ingénieur Réseaux & Télécom | Spécialiste DevOps & Sécurité</p>
+  </header>
+
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="#skills">Compétences</a>
+    <a href="#projects">Projets</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>À propos</h2>
+    <p style="text-align:center; max-width:700px; margin:auto">Passionné par l’univers du numérique, je développe des solutions sécurisées et performantes à l’aide d’outils modernes comme Docker, Kubernetes et GitLab CI/CD.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Compétences</h2>
+    <div class="content-grid">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/226/226772.png" alt="Linux">
+        <h3>Linux / Unix</h3>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png" alt="Docker">
+        <h3>Docker / Kubernetes</h3>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="CI/CD">
+        <h3>CI/CD GitLab</h3>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/929/929426.png" alt="Monitoring">
+        <h3>Monitoring & Sécurité</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projets</h2>
+    <div class="content-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Monitoring">
+        <h3>Monitoring Docker</h3>
+        <p>Stack Prometheus, Grafana, cAdvisor et alerting pour le suivi de conteneurs.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1610484826884-cd3f1d0bd89f?auto=format&fit=crop&w=800&q=80" alt="QR Code">
+        <h3>Pointage QR Code</h3>
+        <p>Application Laravel pour le pointage horaire via QR code mobile.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center">📧 goldenroch@example.com</p>
+    <p style="text-align:center">🌐 <a href="https://github.com/tonpseudo" target="_blank">@tonpseudo</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Golden Roch. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
